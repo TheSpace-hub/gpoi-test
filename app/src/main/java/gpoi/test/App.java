@@ -4,9 +4,8 @@
 package gpoi.test;
 
 import com.pi4j.io.*;
-
+    
 public class App {
     public static void main(String[] args) {
-        
     }
 }
