@@ -3,9 +3,16 @@
  */
 package gpoi.test;
 
-import com.pi4j.io.*;
-    
+import com.pi4j.Pi4J;
+import com.pi4j.context.Context;
+import com.pi4j.io.gpio.digital.DigitalOutput;
+import com.pi4j.io.gpio.digital.DigitalState;
+
 public class App {
     public static void main(String[] args) {
+        Context pi4j = Pi4J.newAutoContext();
+        DigitalOutput output = pi4j.dout().create(4);
+        output.config().shutdownState(DigitalState.HIGH);
+        output.high();
     }
 }
