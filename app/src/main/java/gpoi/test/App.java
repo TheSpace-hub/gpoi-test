@@ -3,12 +3,12 @@
  */
 package gpoi.test;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import jssc.SerialPortList;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        for (String name : SerialPortList.getPortNames()) {
+            System.out.println(name);
+        }
     }
 }
